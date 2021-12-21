@@ -21,11 +21,12 @@
             android:layout_height="0dp"
             android:layout_gravity="end"
             android:layout_weight="1"
+            android:autoSizeTextType="uniform"
             android:gravity="center_vertical"
-            android:paddingEnd="30dp"
-            android:text="14+14"
+            android:layout_margin="25dp"
             android:textColor="@color/white"
-            android:textSize="60sp" />
+            android:textSize="60sp"
+            tools:targetApi="o" />
 
         <TextView
             android:id="@+id/result_text_view"
@@ -34,8 +35,7 @@
             android:layout_gravity="end"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:paddingEnd="30dp"
-            android:text="28"
+            android:layout_margin="25dp"
             android:textColor="@color/white"
             android:textSize="30sp" />
 
@@ -64,7 +64,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="c"
+                android:text="@string/Clear"
                 android:textColor="#F44336"
                 android:textSize="25sp" />
 
@@ -74,7 +74,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="()"
+                android:text="@string/parentheses"
                 android:textColor="#FF9800"
                 android:textSize="25sp" />
 
@@ -84,7 +84,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="%"
+                android:text="@string/percent"
                 android:textColor="#FF9800"
                 android:textSize="25sp" />
 
@@ -94,7 +94,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="/"
+                android:text="@string/divide"
                 android:textColor="#FF9800"
                 android:textSize="25sp" />
 
@@ -106,32 +106,32 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/number_7_button"
+                android:id="@+id/number_seven_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="7"
+                android:text="@string/seven"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/number_8_button"
+                android:id="@+id/number_eight_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="8"
+                android:text="@string/eight"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/number_9_button"
+                android:id="@+id/number_nine_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="9"
+                android:text="@string/nine"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
@@ -141,7 +141,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="x"
+                android:text="@string/multiply"
                 android:textColor="#FF9800"
                 android:textSize="25sp" />
 
@@ -153,32 +153,32 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/number_4_button"
+                android:id="@+id/number_four_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="4"
+                android:text="@string/four"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/number_5_button"
+                android:id="@+id/number_five_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="5"
+                android:text="@string/five"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/number_6_button"
+                android:id="@+id/number_six_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="6"
+                android:text="@string/six"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
@@ -188,7 +188,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="-"
+                android:text="@string/subtract"
                 android:textColor="#FF9800"
                 android:textSize="25sp" />
 
@@ -200,32 +200,32 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/number_1_button"
+                android:id="@+id/number_one_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="1"
+                android:text="@string/one"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/number_2_button"
+                android:id="@+id/number_two_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="2"
+                android:text="@string/two"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/number_3_button"
+                android:id="@+id/number_three_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="3"
+                android:text="@string/three"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
@@ -235,7 +235,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="+"
+                android:text="@string/sum"
                 android:textColor="#FF9800"
                 android:textSize="25sp" />
 
@@ -252,17 +252,17 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text=","
+                android:text="@string/comma"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
             <Button
-                android:id="@+id/number_0_button"
+                android:id="@+id/number_zero_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="0"
+                android:text="@string/zero"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
@@ -272,7 +272,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:backgroundTint="#FF9800"
-                android:text="="
+                android:text="@string/equals"
                 android:textColor="@color/white"
                 android:textSize="40sp" />
 

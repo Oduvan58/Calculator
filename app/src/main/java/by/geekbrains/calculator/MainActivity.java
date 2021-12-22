@@ -1,5 +1,6 @@
 package by.geekbrains.calculator;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +27,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         data = new SymbolData();
 
         initViews();
+        initShowSecondButton();
+    }
+
+    private void initShowSecondButton() {
+        findViewById(R.id.show_second_button).setOnClickListener(v -> {
+            Intent intent = new Intent(this, SecondActivity.class);
+            intent.putExtra(SecondActivity.SHOW_NUMBER_KEY, workingTextView.getText().toString());
+            startActivity(intent);
+        });
     }
 
     private void initViews() {

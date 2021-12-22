@@ -1,36 +1,31 @@
 package by.geekbrains.calculator;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String NUMBER_SAVE_KEY = "number_key";
+
+    private SymbolData data;
 
     private TextView workingTextView;
     private TextView resultTextView;
 
-    private Button zeroButton, oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton
-            , sevenButton, eightButton, nineButton, clearButton;
-
-    private long number;
+    private Button zeroButton, oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton, sevenButton, eightButton, nineButton, clearButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        data = new SymbolData();
+
         initViews();
-
-        if (savedInstanceState != null && savedInstanceState.containsKey(NUMBER_SAVE_KEY)) {
-            number = savedInstanceState.getLong(NUMBER_SAVE_KEY);
-        }
-
-        showInput();
     }
 
     private void initViews() {
@@ -78,9 +73,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.number_seven_button:
             case R.id.number_eight_button:
             case R.id.number_nine_button:
-                working = working + ((Button) view).getText();
-                number = Long.parseLong(working);
-                showInput();
+                data.writeNumber(working, ((Button) view).getText());
+                setTextNumber(workingTextView, data.getNumber());
                 break;
             case R.id.clear_button:
                 workingTextView.setText("");
@@ -88,13 +82,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private void showInput() {
-        workingTextView.setText(String.valueOf(number));
+    private void setTextNumber(TextView textNumber, long numbers) {
+        textNumber.setText(String.valueOf(numbers));
     }
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putLong(NUMBER_SAVE_KEY, number);
+        outState.putSerializable(NUMBER_SAVE_KEY, data);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        data = (SymbolData) savedInstanceState.getSerializable(NUMBER_SAVE_KEY);
+        setTextNumbers();
+    }
+
+    private void setTextNumbers() {
+        setTextNumber(workingTextView, data.getNumber());
     }
 }

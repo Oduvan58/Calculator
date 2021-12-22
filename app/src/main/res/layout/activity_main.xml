@@ -22,7 +22,7 @@
             android:layout_gravity="end"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
-            android:gravity="center_vertical"
+            android:gravity="end"
             android:layout_margin="25dp"
             android:textColor="@color/white"
             android:textSize="60sp"

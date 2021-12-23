@@ -33,9 +33,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initShowSecondButton() {
         findViewById(R.id.show_second_button).setOnClickListener(v -> {
             Intent intent = new Intent(this, SecondActivity.class);
-            intent.putExtra(SecondActivity.SHOW_NUMBER_KEY, workingTextView.getText().toString());
+            putSymbolData();
+            intent.putExtra(SecondActivity.SHOW_SYMBOLS_KEY, data);
             startActivity(intent);
         });
+    }
+
+    private void putSymbolData() {
+        data.setNumber(Long.parseLong(workingTextView.getText().toString()));
     }
 
     private void initViews() {
@@ -99,13 +104,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putSerializable(NUMBER_SAVE_KEY, data);
+        outState.putParcelable(NUMBER_SAVE_KEY, data);
     }
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        data = (SymbolData) savedInstanceState.getSerializable(NUMBER_SAVE_KEY);
+        data = savedInstanceState.getParcelable(NUMBER_SAVE_KEY);
         setTextNumbers();
     }
 

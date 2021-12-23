@@ -1,12 +1,12 @@
 package by.geekbrains.calculator;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class SecondActivity extends AppCompatActivity {
-    public static final String SHOW_NUMBER_KEY = "show_number";
+    public static final String SHOW_SYMBOLS_KEY = "show_symbol_data";
 
     private TextView showNumberTextView;
 
@@ -21,7 +21,11 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     private void getInputNumber() {
-        String number = getIntent().getExtras().getString(SHOW_NUMBER_KEY);
-        showNumberTextView.setText(number);
+        SymbolData data = getIntent().getExtras().getParcelable(SHOW_SYMBOLS_KEY);
+        putView(data);
+    }
+
+    private void putView(SymbolData data) {
+        showNumberTextView.setText(String.valueOf(data.getNumber()));
     }
 }

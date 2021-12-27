@@ -5,18 +5,22 @@ import android.os.Parcelable;
 
 public class SymbolData implements Parcelable {
 
-    private long number;
+    private String inputNumber;
+    private String outputNumber;
 
     public SymbolData() {
-        number = 0;
+        inputNumber = "";
+        outputNumber = "";
     }
 
-    public SymbolData(long number) {
-        setNumber(number);
+    public SymbolData(String inputNumber, String outputNumber) {
+        setInputNumber(inputNumber);
+        setOutputNumber(outputNumber);
     }
 
     protected SymbolData(Parcel in) {
-        number = in.readLong();
+        inputNumber = in.readString();
+        outputNumber = in.readString();
     }
 
     public static final Creator<SymbolData> CREATOR = new Creator<SymbolData>() {
@@ -31,17 +35,20 @@ public class SymbolData implements Parcelable {
         }
     };
 
-    public long getNumber() {
-        return number;
+    public String getInputNumber() {
+        return inputNumber;
     }
 
-    public void setNumber(long number) {
-        this.number = number;
+    public void setInputNumber(String inputNumber) {
+        this.inputNumber = inputNumber;
     }
 
-    public void writeNumber(String symbol, CharSequence view) {
-        symbol = symbol + view;
-        number = Long.parseLong(symbol);
+    public String getOutputNumber() {
+        return outputNumber;
+    }
+
+    public void setOutputNumber(String outputNumber) {
+        this.outputNumber = outputNumber;
     }
 
     @Override
@@ -51,6 +58,7 @@ public class SymbolData implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeLong(number);
+        parcel.writeString(inputNumber);
+        parcel.writeString(outputNumber);
     }
 }

@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_weight="4"
         android:background="#DD393434"
         android:orientation="vertical">
 
@@ -47,56 +47,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="7"
+        android:layout_weight="6"
         android:background="#F23C3636"
         android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/clear_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/clear_button"
-                android:textColor="#F44336"
-                android:textSize="25sp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/parentheses_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/parentheses_button"
-                android:textColor="#FF9800"
-                android:textSize="25sp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/percent_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/percent_button"
-                android:textColor="#FF9800"
-                android:textSize="25sp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/divide_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/divide_button"
-                android:textColor="#FF9800"
-                android:textSize="25sp" />
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -108,6 +61,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:autoSizeTextType="uniform"
                 android:background="?android:attr/selectableItemBackground"
                 android:text="@string/seven_button"
                 android:textColor="@color/white"
@@ -118,6 +72,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:autoSizeTextType="uniform"
                 android:background="?android:attr/selectableItemBackground"
                 android:text="@string/eight_button"
                 android:textColor="@color/white"
@@ -128,19 +83,32 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:autoSizeTextType="uniform"
                 android:background="?android:attr/selectableItemBackground"
                 android:text="@string/nine_button"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/multiply_button"
+                android:id="@+id/subtract_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:autoSizeTextType="uniform"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="@string/multiply_button"
+                android:text="@string/subtract_button"
                 android:textColor="#FF9800"
+                android:textSize="25sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/clear_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/clear_button"
+                android:textColor="#F44336"
                 android:textSize="25sp" />
 
         </LinearLayout>
@@ -155,6 +123,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:autoSizeTextType="uniform"
                 android:background="?android:attr/selectableItemBackground"
                 android:text="@string/four_button"
                 android:textColor="@color/white"
@@ -165,6 +134,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:autoSizeTextType="uniform"
                 android:background="?android:attr/selectableItemBackground"
                 android:text="@string/five_button"
                 android:textColor="@color/white"
@@ -175,18 +145,31 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:autoSizeTextType="uniform"
                 android:background="?android:attr/selectableItemBackground"
                 android:text="@string/six_button"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/subtract_button"
+                android:id="@+id/sum_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:autoSizeTextType="uniform"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="@string/subtract_button"
+                android:text="@string/sum_button"
+                android:textColor="#FF9800"
+                android:textSize="25sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/percent_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/percent_button"
                 android:textColor="#FF9800"
                 android:textSize="25sp" />
 
@@ -202,6 +185,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:autoSizeTextType="uniform"
                 android:background="?android:attr/selectableItemBackground"
                 android:text="@string/one_button"
                 android:textColor="@color/white"
@@ -212,6 +196,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:autoSizeTextType="uniform"
                 android:background="?android:attr/selectableItemBackground"
                 android:text="@string/two_button"
                 android:textColor="@color/white"
@@ -222,18 +207,31 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:autoSizeTextType="uniform"
                 android:background="?android:attr/selectableItemBackground"
                 android:text="@string/three_button"
                 android:textColor="@color/white"
                 android:textSize="25sp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/sum_button"
+                android:id="@+id/multiply_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:autoSizeTextType="uniform"
                 android:background="?android:attr/selectableItemBackground"
-                android:text="@string/sum_button"
+                android:text="@string/multiply_button"
+                android:textColor="#FF9800"
+                android:textSize="25sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/parentheses_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/parentheses_button"
                 android:textColor="#FF9800"
                 android:textSize="25sp" />
 
@@ -249,6 +247,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:autoSizeTextType="uniform"
                 android:background="?android:attr/selectableItemBackground"
                 android:text="@string/comma_button"
                 android:textColor="@color/white"
@@ -259,6 +258,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:autoSizeTextType="uniform"
                 android:background="?android:attr/selectableItemBackground"
                 android:text="@string/zero_button"
                 android:textColor="@color/white"
@@ -269,16 +269,29 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="#FF9800"
                 android:text="@string/equals_button"
                 android:textColor="@color/white"
                 android:textSize="40sp" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/divide_button"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/divide_button"
+                android:textColor="#FF9800"
+                android:textSize="25sp" />
+
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/show_second_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="#009688"
                 android:padding="5dp"
                 android:text="@string/show_second_activity_button"

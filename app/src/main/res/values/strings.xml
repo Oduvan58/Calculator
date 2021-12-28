@@ -1,24 +1,24 @@
 <resources>
     <string name="app_name">Calculator</string>
-    <string name="Clear">c</string>
-    <string name="parentheses">()</string>
-    <string name="percent">%</string>
-    <string name="divide">/</string>
-    <string name="seven">7</string>
-    <string name="eight">8</string>
-    <string name="nine">9</string>
-    <string name="multiply">x</string>
-    <string name="four">4</string>
-    <string name="five">5</string>
-    <string name="six">6</string>
-    <string name="subtract">-</string>
-    <string name="one">1</string>
-    <string name="two">2</string>
-    <string name="three">3</string>
-    <string name="sum">+</string>
-    <string name="comma">,</string>
-    <string name="zero">0</string>
-    <string name="equals">=</string>
-    <string name="show_second_activity">Show number</string>
+    <string name="clear_button">c</string>
+    <string name="parentheses_button">()</string>
+    <string name="percent_button">%</string>
+    <string name="divide_button">/</string>
+    <string name="seven_button">7</string>
+    <string name="eight_button">8</string>
+    <string name="nine_button">9</string>
+    <string name="multiply_button">x</string>
+    <string name="four_button">4</string>
+    <string name="five_button">5</string>
+    <string name="six_button">6</string>
+    <string name="subtract_button">-</string>
+    <string name="one_button">1</string>
+    <string name="two_button">2</string>
+    <string name="three_button">3</string>
+    <string name="sum_button">+</string>
+    <string name="comma_button">,</string>
+    <string name="zero_button">0</string>
+    <string name="equals_button">=</string>
+    <string name="show_second_activity_button">Show number</string>
     <string name="title_second_activity">Second activity</string>
 </resources>

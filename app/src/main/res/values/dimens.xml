@@ -10,4 +10,6 @@
     <dimen name="text_size_button_second_activity">15sp</dimen>
     <dimen name="padding_show_button">5dp</dimen>
     <dimen name="text_button_size_land">18sp</dimen>
+    <dimen name="corner_button_themes">55dp</dimen>
+
 </resources>

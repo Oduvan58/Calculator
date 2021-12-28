@@ -58,43 +58,24 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/clear_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
+                style="@style/operation_button"
                 android:text="@string/clear_button"
-                android:textColor="@color/red"
-                android:textSize="@dimen/text_button_size" />
+                android:textColor="@color/red" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/parentheses_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/parentheses_button"
-                android:textColor="@color/orange"
-                android:textSize="@dimen/text_button_size" />
+                style="@style/operation_button"
+                android:text="@string/parentheses_button" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/percent_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/percent_button"
-                android:textColor="@color/orange"
-                android:textSize="@dimen/text_button_size" />
+                style="@style/operation_button"
+                android:text="@string/percent_button" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/divide_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/divide_button"
-                android:textColor="@color/orange"
-                android:textSize="@dimen/text_button_size" />
+                style="@style/operation_button"
+                android:text="@string/divide_button" />
 
         </LinearLayout>
 
@@ -105,43 +86,24 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/number_seven_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/seven_button"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_button_size" />
+                style="@style/numbers_button"
+                android:text="@string/seven_button" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/number_eight_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/eight_button"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_button_size" />
+                style="@style/numbers_button"
+                android:text="@string/eight_button" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/number_nine_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/nine_button"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_button_size" />
+                style="@style/numbers_button"
+                android:text="@string/nine_button" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/multiply_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
+                style="@style/operation_button"
                 android:text="@string/multiply_button"
-                android:textColor="@color/orange"
-                android:textSize="@dimen/text_button_size" />
+                android:textAllCaps="false" />
 
         </LinearLayout>
 
@@ -152,43 +114,23 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/number_four_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/four_button"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_button_size" />
+                style="@style/numbers_button"
+                android:text="@string/four_button" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/number_five_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/five_button"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_button_size" />
+                style="@style/numbers_button"
+                android:text="@string/five_button" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/number_six_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/six_button"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_button_size" />
+                style="@style/numbers_button"
+                android:text="@string/six_button" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/subtract_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/subtract_button"
-                android:textColor="@color/orange"
-                android:textSize="@dimen/text_button_size" />
+                style="@style/operation_button"
+                android:text="@string/subtract_button" />
 
         </LinearLayout>
 
@@ -199,43 +141,23 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/number_one_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/one_button"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_button_size" />
+                style="@style/numbers_button"
+                android:text="@string/one_button" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/number_two_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/two_button"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_button_size" />
+                style="@style/numbers_button"
+                android:text="@string/two_button" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/number_three_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/three_button"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_button_size" />
+                style="@style/numbers_button"
+                android:text="@string/three_button" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/sum_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/sum_button"
-                android:textColor="@color/orange"
-                android:textSize="@dimen/text_button_size" />
+                style="@style/operation_button"
+                android:text="@string/sum_button" />
 
         </LinearLayout>
 
@@ -246,44 +168,23 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/comma_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/comma_button"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_button_size" />
+                style="@style/numbers_button"
+                android:text="@string/comma_button" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/number_zero_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:text="@string/zero_button"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_button_size" />
+                style="@style/numbers_button"
+                android:text="@string/zero_button" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/equals_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/orange"
-                android:text="@string/equals_button"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_button_size" />
+                style="@style/equal_button"
+                android:text="@string/equals_button" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/show_second_button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:backgroundTint="@color/turquoise"
-                android:padding="5dp"
-                android:text="@string/show_second_activity_button"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_size_button_second_activity" />
+                style="@style/show_number_button"
+                android:text="@string/show_second_activity_button" />
 
         </LinearLayout>
 

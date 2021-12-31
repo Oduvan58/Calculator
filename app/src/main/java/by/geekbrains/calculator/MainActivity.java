@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private boolean operationClick(String work) {
-        String[] operations = {"+", "/", "-", "*", "%"};
+        String[] operations = {"+", "/", "-", "*", "%", "("};
         for (int i = 0; i < operations.length; i++) {
             if (work.endsWith(operations[i]) || work.length() == 0) {
                 return false;
@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private boolean setComma(String work) {
-        String[] operations = {"+", "/", "-", "*", "%"};
+        String[] operations = {"+", "/", "-", "*", "%", "(", ")"};
         for (int i = 0; i < operations.length; i++) {
             if (work.endsWith(operations[i]) || work.length() == 0 || count == 1) {
                 return false;

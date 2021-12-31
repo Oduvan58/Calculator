@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="numbers_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_button_size</item>
+    </style>
+
+    <style name="operation_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:textSize">@dimen/text_button_size</item>
+    </style>
+
+    <style name="equal_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:backgroundTint">@color/orange</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_button_size</item>
+    </style>
+
+    <style name="show_number_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:backgroundTint">@color/turquoise</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">@dimen/padding_show_button</item>
+        <item name="android:textSize">@dimen/text_size_button_second_activity</item>
+    </style>
+
+</resources>

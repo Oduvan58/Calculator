@@ -21,7 +21,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView workingTextView;
     private TextView resultTextView;
 
-    private Button zeroButton, oneButton, twoButton, threeButton, fourButton, fiveButton, sixButton, sevenButton, eightButton, nineButton, clearButton, parenthesesButton, percentButton, divideButton, multiplyButton, subtractButton, sumButton, commaButton, equalsButton;
+    private Button zeroButton;
+    private Button oneButton;
+    private Button twoButton;
+    private Button threeButton;
+    private Button fourButton;
+    private Button fiveButton;
+    private Button sixButton;
+    private Button sevenButton;
+    private Button eightButton;
+    private Button nineButton;
+
+    private Button clearButton;
+    private Button parenthesesButton;
+    private Button percentButton;
+    private Button divideButton;
+    private Button multiplyButton;
+    private Button subtractButton;
+    private Button sumButton;
+    private Button commaButton;
+    private Button equalsButton;
 
     String working = "";
     boolean checkParentheses = false;

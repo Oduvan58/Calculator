@@ -1,5 +1,6 @@
 package by.geekbrains.calculator;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -42,7 +43,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button commaButton;
     private Button equalsButton;
 
-    String working = "";
+    private String working = "";
+    private int count = 0;
+    private boolean countSymbol = false;
+    private Double result = 0.0;
+    private boolean countEquals = false;
     boolean checkParentheses = false;
 
     @Override
@@ -121,6 +126,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         equalsButton.setOnClickListener(this);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onClick(View view) {
         working = workingTextView.getText().toString();
@@ -135,14 +141,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.number_seven_button:
             case R.id.number_eight_button:
             case R.id.number_nine_button:
-            case R.id.percent_button:
-            case R.id.divide_button:
-            case R.id.multiply_button:
-            case R.id.subtract_button:
-            case R.id.sum_button:
-            case R.id.comma_button:
                 working = working + ((Button) view).getText();
                 workingTextView.setText(working);
+                break;
+            case R.id.clear_button:
+                workingTextView.setText("");
+                resultTextView.setText("");
                 break;
             case R.id.parentheses_button:
                 if (checkParentheses) {
@@ -155,15 +159,46 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     checkParentheses = true;
                 }
                 break;
-            case R.id.clear_button:
-                workingTextView.setText("");
-                resultTextView.setText("");
+            case R.id.percent_button:
+                if (working.length() != 0) {
+                    working = working.replaceAll("%", "/100");
+                    working = working + "%";
+                    workingTextView.setText(working);
+                }
+                break;
+            case R.id.divide_button:
+                if (operationClick(working)) {
+                    working = working + "/";
+                    workingTextView.setText(working);
+                }
+                break;
+            case R.id.multiply_button:
+                if (operationClick(working)) {
+                    working = working.replaceAll("x", "*");
+                    working = working + "*";
+                    workingTextView.setText(working);
+                }
+                break;
+            case R.id.subtract_button:
+                if (operationClick(working)) {
+                    working = working + "-";
+                    workingTextView.setText(working);
+                }
+                break;
+            case R.id.sum_button:
+                if (operationClick(working)) {
+                    working = working + "+";
+                    workingTextView.setText(working);
+                }
+                break;
+            case R.id.comma_button:
+                if (setComma(working)) {
+                    working = working.replaceAll(",", ".");
+                    working = working + ".";
+                    workingTextView.setText(working);
+                }
                 break;
             case R.id.equals_button:
-                working = working.replaceAll("x", "*");
-                working = working.replaceAll("%", "/100");
-                working = working.replaceAll(",", ".");
-
                 Double result = null;
                 ScriptEngine engine = new ScriptEngineManager().getEngineByName("rhino");
                 try {
@@ -177,6 +212,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 break;
         }
+    }
+
+    private boolean operationClick(String work) {
+        String[] operations = {"+", "/", "-", "*", "%", "("};
+        for (int i = 0; i < operations.length; i++) {
+            if (work.endsWith(operations[i]) || work.length() == 0) {
+                return false;
+            }
+        }
+        if (countEquals) {
+            countSymbol = true;
+            countEquals = false;
+        }
+        count = 0;
+        return true;
+    }
+
+    private boolean setComma(String work) {
+        String[] operations = {"+", "/", "-", "*", "%", "("};
+        for (int i = 0; i < operations.length; i++) {
+            if (work.endsWith(operations[i]) || work.length() == 0 || count == 1) {
+                return false;
+            }
+        }
+        count = 1;
+        return true;
     }
 
     private void setTextNumber(TextView textNumber, String numbers) {
